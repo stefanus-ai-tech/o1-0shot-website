@@ -1,0 +1,171 @@
+/* Root variables for easy theming */
+:root {
+  --font-heading: "Arial", sans-serif;
+  --font-body: "Verdana", sans-serif;
+  --color-background: #ffffff;
+  --color-text: #333333;
+  --color-primary: #4caf50;
+  --color-secondary: #2196f3;
+  --color-accent: #ff5722;
+  --transition-time: 0.3s;
+}
+
+/* Base styles */
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  background-color: var(--color-background);
+  color: var(--color-text);
+  transition: background-color var(--transition-time),
+    color var(--transition-time);
+}
+
+/* Header and footer styling */
+header,
+footer {
+  background-color: var(--color-primary);
+  color: #ffffff;
+  padding: 1rem;
+  text-align: center;
+  position: relative;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-heading);
+}
+
+/* Main content styling */
+main {
+  padding: 1rem;
+}
+
+/* Navigation (search bar) styling */
+nav {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+
+#search-input {
+  width: 50%;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+/* Dark mode toggle button styling */
+#dark-mode-toggle {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+/* Roadmap container styling */
+#roadmap {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Category styling */
+.category {
+  border: 1px solid var(--color-secondary);
+  border-radius: 5px;
+  padding: 1rem;
+}
+
+/* Category header styling */
+.category-header {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.category-header h3 {
+  flex-grow: 1;
+  margin: 0;
+}
+
+/* Category content (sub-topics) styling */
+.category-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height var(--transition-time) ease-out;
+}
+
+.category-content.open {
+  max-height: 500px; /* Adjust as needed */
+  transition: max-height var(--transition-time) ease-in;
+}
+
+/* Sub-topic styling */
+.sub-topic {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.sub-topic:last-child {
+  border-bottom: none;
+}
+
+.sub-topic p {
+  margin: 0;
+  cursor: pointer;
+}
+
+/* Description styling (hidden by default) */
+.description {
+  display: none;
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 0.5rem;
+}
+
+/* Checkbox styling */
+.complete-checkbox {
+  margin-left: 1rem;
+}
+
+.completed-label {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+/* Resources section styling */
+#resources {
+  padding: 1rem;
+  background-color: #f9f9f9;
+}
+
+/* Responsive design for mobile devices */
+@media (max-width: 600px) {
+  #search-input {
+    width: 80%;
+  }
+}
+
+/* Dark mode styles */
+.dark-mode {
+  --color-background: #121212;
+  --color-text: #e0e0e0;
+}
+
+.dark-mode header,
+.dark-mode footer {
+  background-color: #1e1e1e;
+}
+
+.dark-mode .category {
+  border-color: #444;
+}
