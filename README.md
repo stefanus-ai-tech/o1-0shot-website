@@ -1,5 +1,5 @@
-# o1-1shot-website
-This site created by openai o1 for testing purposes in one shot prompting. The prompt is this below
+# o1-0shot-website
+This site created by openai o1 for testing purposes in zero shot prompting. The prompt is this below
 
 ```
 Create an interactive and visually appealing roadmap for becoming an AI/ML engineer using HTML, CSS, and JavaScript. The roadmap should be aesthetically pleasing and easy to navigate. Follow these requirements:
